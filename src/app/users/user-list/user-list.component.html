@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row my-5">
+    <div class="col-12">
+      <h5>Поиск по странице</h5>
+      <input type="search" class="form-control" placeholder="Имя/Фамилия" [(ngModel)]="searchStr" />
+    </div>
+  </div>
+  <div class="row my-3">
+    <div class="col-2">
+      <b>Сортировать по </b></div>
+    <div class="col-4">
+      <select class="form-control" [(ngModel)]="column">
+        <option value="byid">id</option>
+        <option value="byage">возрасту</option>
+      </select>
+    </div>
+    <div class="col-3">
+      от большего к меньшему <input type="checkbox" [(ngModel)]="reverse">
+    </div>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Имя</th>
+        <th scope="col">Фамилия</th>
+        <th scope="col">Возраст</th>
+        <th scope="col">Отдел</th>
+        <th scope="col"></th>
+        <th class="text-right" scope="col">
+          <button class="btn btn-primary" (click)="onAddProfile()">
+            Добавить сотрудника
+          </button>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users | search : searchStr |sort:column:reverse">
+        <td scope="row">{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.surname }}</td>
+        <td>{{ user.birthday |calculateAge}}</td>
+        <td>{{ user.type |type}}</td>
+
+        <td class="text-right">
+          <button class="btn btn-outline-primary" (click)="onLinkProfile(user.id)">
+            Редактировать
+          </button>
+        </td>
+        <td class="text-right">
+          <button class="btn btn-outline-danger modal-exit mr-2" (click)="onDelete(user.id)">
+            Удалить
+          </button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

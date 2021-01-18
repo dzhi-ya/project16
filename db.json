@@ -1,0 +1,54 @@
+{
+  "workers": [
+    {
+      "name": "Иван",
+      "surname": "Иванов",
+      "patronymic": "Иванович",
+      "phone": "+7 (916) 721-56-20",
+      "email": "ivan@mail.ru",
+      "birthday": "1985-10-18",
+      "type": 0,
+      "id": 1
+    },
+    {
+      "name": "Петр",
+      "surname": "Петров",
+      "patronymic": "Петрович",
+      "phone": "+7 (916) 721-56-20",
+      "email": "petr@mail.ru",
+      "birthday": "1986-03-04",
+      "type": 1,
+      "id": 2
+    },
+    {
+      "name": "Сидр",
+      "surname": "Сидоров",
+      "patronymic": "Сидорович",
+      "phone": "+7 (916) 721-56-20",
+      "email": "sidr@mail.ru",
+      "birthday": "1995-11-06",
+      "type": 2,
+      "id": 3
+    },
+    {
+      "name": "Василий",
+      "surname": "Васильев",
+      "patronymic": "Васильевич",
+      "phone": "+7 (916) 721-56-20",
+      "email": "vasilii@mail.ru",
+      "birthday": "1987-11-11",
+      "type": 3,
+      "id": 4
+    },
+    {
+      "name": "Саша",
+      "surname": "Каша",
+      "patronymic": "Павлович",
+      "phone": "+7 (916) 721-56-20",
+      "email": "sasha@mail.ru",
+      "birthday": "1998-03-05",
+      "type": 3,
+      "id": 5
+    }
+  ]
+}
